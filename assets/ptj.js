@@ -218,24 +218,6 @@ function nextImage(projectIdx) {
 function prevImage(projectIdx) {
   showImage(projectIdx, imageIndexes[projectIdx] - 1);
 }
-// Otomatis geser gambar hanya untuk project yang aktif
-let autoSlideInterval;
-
-function startAutoSlide() {
-  clearInterval(autoSlideInterval);
-  autoSlideInterval = setInterval(() => {
-    nextImage(currentProject);
-  }, 4000);
-}
-
-// Jalankan auto slide setiap kali project ditampilkan
-function showProject(index) {
-  if (index < 0) index = totalProjects - 1;
-  if (index >= totalProjects) index = 0;
-  currentProject = index;
-  projectCarousel.style.transform = `translateX(-${index * 100}%)`;
-  startAutoSlide();
-}
 // Inisialisasi tampilan awal untuk semua project dan gambar
 showProject(0);
 for (let i = 0; i < imageIndexes.length; i++) {
