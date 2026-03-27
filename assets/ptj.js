@@ -200,7 +200,11 @@ function prevProject() {
 }
 
 // Image carousel logic per project
+<<<<<<< HEAD
 let imageIndexes = [0, 0, 0, 0, 0, 0, 0]; // one for each project
+=======
+let imageIndexes = [0, 0, 0]; // one for each project
+>>>>>>> d1bbaf60c1d953ca0c7bd152a8180a8ed8cdd7a2
 
 function showImage(projectIdx, imageIdx) {
   const imageSlide = document.getElementById(`imageSlide${projectIdx}`);
